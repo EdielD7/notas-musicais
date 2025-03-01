@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Musical</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Exercício de Notas Musicais</h1>
+    
+    <div class="game-container">
+        <!-- Seletor de modo do exercício -->
+        <div class="mode-selector">
+            <div class="mode-title">Escolha o modo de exercício:</div>
+            <div class="mode-options">
+                <div class="mode-option">
+                    <input type="radio" id="modeNatural" name="mode" value="natural" checked>
+                    <label for="modeNatural">7 Notas Naturais</label>
+                </div>
+                <div class="mode-option">
+                    <input type="radio" id="modeSharps" name="mode" value="sharps">
+                    <label for="modeSharps">12 Notas Musicais com Sustenidos (#)</label>
+                </div>
+                <div class="mode-option">
+                    <input type="radio" id="modeFlats" name="mode" value="flats">
+                    <label for="modeFlats">12 Notas Musicais com Bemóis (♭)</label>
+                </div>
+            </div>
+            <button id="startButton">Iniciar</button>
+        </div>
+        
+        <p>Identifique a nota anterior e a próxima nota na sequência musical:</p>
+        
+        <!-- Área para exibir a nota atual -->
+        <div class="current-note" id="currentNote">?</div>
+        
+        <!-- Formulário para entrada das notas anterior e próxima -->
+        <div class="input-container">
+            <div class="input-group">
+                <label for="previousNote">Nota Anterior:</label>
+                <input type="text" id="previousNote" placeholder="Digite a nota anterior">
+            </div>
+            
+            <div class="input-group">
+                <label for="nextNote">Próxima Nota:</label>
+                <input type="text" id="nextNote" placeholder="Digite a próxima nota">
+            </div>
+        </div>
+        
+        <!-- Botões para interação com o jogo -->
+        <button id="checkButton" disabled>Verificar</button>
+        
+        <!-- Área para exibir mensagens de feedback -->
+        <div id="message"></div>
+    </div>
+
+    <footer>
+        <p>
+            Este app foi desenvolvido por <a href="https://www.linkedin.com/in/ediel-jonathan/">Ediel Jonathan</a>. Todos os direitos reservados.
+        </p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
